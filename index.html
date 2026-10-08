@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saumya Singh | Boli: AI receptionist for Indian small businesses</title>
+<meta name="description" content="Saumya Singh is building Boli, a Hindi/Hinglish AI receptionist on WhatsApp for clinics, coaching centres and salons.">
+<style>
+:root{--bg:#fbf8f3;--fg:#1d1a22;--mut:#6b6573;--card:#fff;--bd:#e8e1d6;--ac:#7c3aed;--ac2:#f97316;--ok:#16a34a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13111a;--fg:#f3eefb;--mut:#a79fb5;--card:#1d1a28;--bd:#322d42;--ac:#a78bfa;--ac2:#fb923c}}
+:root[data-theme="dark"]{--bg:#13111a;--fg:#f3eefb;--mut:#a79fb5;--card:#1d1a28;--bd:#322d42;--ac:#a78bfa;--ac2:#fb923c}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--ac)}h1,h2,h3{line-height:1.2;margin:0 0 .5em}
+.w{max-width:1000px;margin:auto;padding:0 20px}section{padding:64px 0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+nav .w{display:flex;align-items:center;gap:14px;height:56px;overflow-x:auto;white-space:nowrap}
+nav b{font-size:18px;margin-right:auto}nav a{text-decoration:none;color:var(--mut);font-size:14px}nav a:hover{color:var(--ac)}
+button,.btn{font:inherit;cursor:pointer;border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:999px;padding:8px 16px}
+.btn.p{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;border:0;text-decoration:none;display:inline-block;padding:12px 24px;font-weight:600}
+.hero{padding:72px 0 40px}.hero h1{font-size:clamp(32px,6vw,56px)}
+.g{background:linear-gradient(135deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{display:inline-block;padding:4px 12px;border-radius:999px;background:color-mix(in srgb,var(--ac) 14%,transparent);color:var(--ac);font-size:13px;font-weight:600;margin-bottom:16px}
+.mut{color:var(--mut)}.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px}
+.stat{font-size:32px;font-weight:800}
+.chat{max-width:420px;margin:auto;background:var(--card);border:1px solid var(--bd);border-radius:20px;overflow:hidden}
+.ch{background:#128c7e;color:#fff;padding:12px 16px;font-weight:600}
+.msgs{padding:14px;height:340px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;background:color-mix(in srgb,var(--bg) 70%,var(--card))}
+.m{max-width:82%;padding:8px 12px;border-radius:12px;font-size:15px}.u{align-self:flex-end;background:#d9fdd3;color:#111}.b{align-self:flex-start;background:var(--card);border:1px solid var(--bd)}
+.opts{padding:10px;display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--bd)}
+.opts button{font-size:14px;padding:6px 12px}
+label{display:block;font-size:14px;margin:12px 0 4px}input[type=range]{width:100%;accent-color:var(--ac)}
+input,textarea{width:100%;font:inherit;padding:10px 12px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--fg)}
+.tl{border-left:3px solid var(--ac);padding-left:18px;display:grid;gap:18px}.tl div{position:relative}.tl div:before{content:"";position:absolute;left:-26px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--ac2)}
+.done:before{background:var(--ok)!important}
+.tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:8px 10px;border-bottom:1px solid var(--bd);text-align:left}
+details{border-bottom:1px solid var(--bd);padding:12px 0}summary{cursor:pointer;font-weight:600}
+footer{padding:32px 0;border-top:1px solid var(--bd);text-align:center;font-size:14px}
+.rv{opacity:0;transform:translateY(16px);transition:.6s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="w"><b>🎙️ Boli</b>
+<a href="#idea">Idea</a><a href="#demo">Live demo</a><a href="#roi">ROI</a><a href="#roadmap">Roadmap</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+<button id="lang" aria-label="Toggle language">हिं</button><button id="th" aria-label="Toggle theme">🌓</button></div></nav>
+
+<header class="hero"><div class="w">
+<span class="tag" data-i="tag">Now piloting with clinics</span>
+<h1 data-i="h1">Never miss a patient again. <span class="g">Your receptionist that speaks Hindi.</span></h1>
+<p class="mut" style="max-width:640px;font-size:18px" data-i="sub">Boli is an AI assistant on WhatsApp that answers customers in Hindi, Hinglish and regional languages, books appointments and sends reminders, 24x7, for a fraction of a staff salary.</p>
+<p><a class="btn p" href="#demo" data-i="cta1">Try the live demo</a> &nbsp; <a href="#contact" data-i="cta2">Get early access →</a></p>
+</div></header>
+
+<section id="idea"><div class="w rv">
+<h2 data-i="h_prob">The problem</h2>
+<div class="grid">
+<div class="c"><div class="stat g">30+</div><p class="mut">calls a busy clinic gets daily. Many go unanswered during consultations or after hours.</p></div>
+<div class="c"><div class="stat g">Hinglish</div><p class="mut">is how customers really type: "kl shaam ko slot hai?" Generic bots fail here.</p></div>
+<div class="c"><div class="stat g">SMB gap</div><p class="mut">Enterprise tools are too costly and complex for a 2-doctor clinic or a coaching class.</p></div>
+</div>
+<h2 style="margin-top:40px" data-i="h_sol">How Boli works</h2>
+<div class="grid">
+<div class="c"><h3>1. Customer messages</h3><p class="mut">On the clinic's existing WhatsApp number. No app to install.</p></div>
+<div class="c"><h3>2. AI understands</h3><p class="mut">Hindi, Hinglish or English, text or voice note.</p></div>
+<div class="c"><h3>3. Takes real action</h3><p class="mut">Checks calendar, books, reschedules. It uses tools, so it never invents a slot.</p></div>
+<div class="c"><h3>4. Hands off safely</h3><p class="mut">Medical or unclear questions go to the owner. No diagnosis, ever.</p></div>
+</div>
+<p class="mut" style="margin-top:16px">Built for: 🦷 clinics · 📚 coaching centres · 💇 salons · 🏋️ gyms</p>
+</div></section>
+
+<section id="demo"><div class="w rv">
+<h2>Live demo: talk to Boli</h2>
+<p class="mut">A scripted simulation of a dental clinic chat. Tap a reply to play the patient.</p>
+<div class="chat"><div class="ch">🦷 Smile Dental Clinic, Jaipur</div><div class="msgs" id="msgs" aria-live="polite"></div><div class="opts" id="opts"></div></div>
+</div></section>
+
+<section id="roi"><div class="w rv">
+<h2>How much could a clinic recover?</h2>
+<div class="c" style="max-width:560px">
+<label>Missed calls per day: <b id="v1">8</b></label><input id="r1" type="range" min="1" max="30" value="8">
+<label>Average fee per patient (₹): <b id="v2">800</b></label><input id="r2" type="range" min="200" max="5000" step="100" value="800">
+<label>Share of missed calls Boli converts: <b id="v3">30</b>%</label><input id="r3" type="range" min="10" max="60" value="30">
+<p style="margin-top:20px" class="mut">Estimated extra revenue per month</p>
+<div class="stat g" id="out">₹0</div>
+<p class="mut" id="roi2"></p>
+<p class="mut" style="font-size:12px">Illustrative estimate (26 working days). Real results vary by clinic.</p>
+</div></div></section>
+
+<section id="roadmap"><div class="w rv">
+<h2>Roadmap <span class="mut" style="font-size:14px">(last updated: Oct 2026)</span></h2>
+<div class="tl" id="tl"></div>
+<h3 style="margin-top:40px">Pricing (pilot)</h3>
+<div class="tbl"><table><tr><th>Plan</th><th>Price</th><th>Includes</th></tr>
+<tr><td>Pilot</td><td>Free, 30 days</td><td>Setup, FAQs, calendar link, feedback calls</td></tr>
+<tr><td>Starter</td><td>₹2,500/mo</td><td>WhatsApp agent, bookings, reminders, conversation cap</td></tr>
+<tr><td>Growth</td><td>₹5,000/mo</td><td>Higher cap, dashboard, multi-language, priority support</td></tr></table></div>
+</div></section>
+
+<section id="about"><div class="w rv">
+<h2>About the founder</h2>
+<div class="c"><h3>Saumya Singh</h3>
+<p>Third-year B.Tech student in IoT and Intelligent Systems at Manipal University Jaipur. I build software and practise DSA, and I contribute to open source. I started Boli after seeing how many small businesses lose customers to unanswered messages, and how few tools speak their language.</p>
+<p>🛠️ Python · C · Data structures & algorithms · AI/ML · Git</p>
+<p><a href="https://github.com/saumyasingh02" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/search/results/all/?keywords=Saumya%20Singh%20Manipal%20University%20Jaipur" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:ssaumyasingh91@gmail.com">Email</a></p></div>
+</div></section>
+
+<section id="faq"><div class="w rv">
+<h2>FAQ</h2>
+<details><summary>Is patient data safe?</summary><p class="mut">Boli takes consent in the first message, collects only what a booking needs, and is designed around India's DPDP Act principles.</p></details>
+<details><summary>Does the AI give medical advice?</summary><p class="mut">No. Medical questions are passed to the doctor. The bot handles timings, fees, location and bookings.</p></details>
+<details><summary>Do I need new software?</summary><p class="mut">No. It works on your WhatsApp Business number and your Google Calendar.</p></details>
+<details><summary>Will it support voice calls?</summary><p class="mut">Yes, planned after WhatsApp is stable. Voice needs a telephony provider and Indic speech models.</p></details>
+</div></section>
+
+<section id="contact"><div class="w rv">
+<h2>Let's talk</h2>
+<p class="mut">Run a clinic, coaching centre or salon? Want to pilot Boli, or collaborate? Send a note, and it opens in your email app addressed to me.</p>
+<div class="c" style="max-width:560px">
+<label for="n">Name</label><input id="n" autocomplete="name">
+<label for="b">Business type</label><input id="b" placeholder="e.g. Dental clinic, Jaipur">
+<label for="m">Message</label><textarea id="m" rows="4"></textarea>
+<p><button class="btn p" id="send">Send via email</button></p>
+<p class="mut" style="font-size:14px">Or write directly: <a href="mailto:ssaumyasingh91@gmail.com">ssaumyasingh91@gmail.com</a> <button id="cp" style="padding:2px 10px;font-size:12px">Copy</button></p>
+</div></div></section>
+
+<footer><div class="w mut">© 2026 Saumya Singh · Boli is an early-stage project · <a href="#top" onclick="scrollTo(0,0);return false">Back to top</a></div></footer>
+
+<script>
+var $=function(s){return document.querySelector(s)};
+// ---- Easy-to-update content ----
+var ROADMAP=[
+ {t:"Oct 2026",h:"Idea validated, website live",d:"Problem research and founder site published.",done:1},
+ {t:"Nov 2026",h:"WhatsApp prototype",d:"Hinglish replies, FAQ answers, Meta Cloud API test number."},
+ {t:"Dec 2026",h:"Booking engine + reminders",d:"Calendar integration, 24h and 2h reminders, owner handoff."},
+ {t:"Jan 2027",h:"Pilot with 3 clinics",d:"Free pilots, real conversations, fix what breaks."},
+ {t:"Mid 2027",h:"First paying clients, voice beta",d:"Indic speech-to-text and text-to-speech over phone calls."}
+];
+$("#tl").innerHTML=ROADMAP.map(function(r){return '<div class="'+(r.done?'done':'')+'"><b>'+r.t+'</b> · '+r.h+'<br><span class="mut">'+r.d+'</span></div>'}).join("");
+// ---- Theme ----
+try{var st=localStorage.getItem("th");if(st)document.documentElement.dataset.theme=st}catch(e){}
+$("#th").onclick=function(){var d=document.documentElement,cur=d.dataset.theme||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light"),n=cur=="dark"?"light":"dark";d.dataset.theme=n;try{localStorage.setItem("th",n)}catch(e){}};
+// ---- Language ----
+var T={hi:{tag:"क्लिनिकों के साथ पायलट जारी",h1:"अब कोई मरीज़ मिस नहीं होगा। आपकी रिसेप्शनिस्ट जो हिंदी बोलती है।",sub:"Boli WhatsApp पर काम करने वाला AI असिस्टेंट है। यह हिंदी, हिंग्लिश और क्षेत्रीय भाषाओं में जवाब देता है, अपॉइंटमेंट बुक करता है और रिमाइंडर भेजता है, 24x7।",cta1:"लाइव डेमो देखें",cta2:"अर्ली एक्सेस पाएं →",h_prob:"समस्या",h_sol:"Boli कैसे काम करता है"}};
+var EN={};document.querySelectorAll("[data-i]").forEach(function(e){EN[e.dataset.i]=e.innerHTML});
+var hi=false;$("#lang").onclick=function(){hi=!hi;document.documentElement.lang=hi?"hi":"en";$("#lang").textContent=hi?"EN":"हिं";document.querySelectorAll("[data-i]").forEach(function(e){var k=e.dataset.i;e.innerHTML=hi&&T.hi[k]?T.hi[k]:EN[k]})};
+// ---- Chat demo ----
+var flow=[
+ {b:"Namaste! 🙏 Smile Dental mein aapka swagat hai. Main Boli hoon. Aap appointment book karna chahenge?",o:["kal shaam ko root canal ke liye slot hai?","Clinic ka time kya hai?"]},
+ {b:"Ji, kal shaam 5:00 aur 6:30 baje ke slots available hain. Aapko kaunsa chahiye?",o:["5 baje","6:30 baje"]},
+ {b:"Theek hai! Kripya apna naam aur number bata dijiye. (Aapka data sirf booking ke liye use hoga.)",o:["Riya, 98xxxxxx21"]},
+ {b:"✅ Appointment confirm! Kal shaam 5:00 baje, Dr. Mehta. Main 4:30 baje reminder bhej dungi.",o:["Mere daant mein dard kyun hai?"]},
+ {b:"Yeh medical sawal hai, isliye main doctor ko forward kar rahi hoon. Wo aapko jald reply karenge. 🩺 (Boli diagnose nahi karti.)",o:["↺ Restart demo"]}
+];
+var step=0;
+function add(c,t){var d=document.createElement("div");d.className="m "+c;d.textContent=t;$("#msgs").appendChild(d);$("#msgs").scrollTop=1e5}
+function show(){var s=flow[step];add("b",s.b);$("#opts").innerHTML="";s.o.forEach(function(x){var bt=document.createElement("button");bt.textContent=x;bt.onclick=function(){if(step==flow.length-1){$("#msgs").innerHTML="";step=0;show();return}add("u",x);$("#opts").innerHTML="";step++;setTimeout(show,600)};$("#opts").appendChild(bt)})}
+show();
+// ---- ROI ----
+function roi(){var a=+$("#r1").value,f=+$("#r2").value,p=+$("#r3").value;$("#v1").textContent=a;$("#v2").textContent=f;$("#v3").textContent=p;var rev=Math.round(a*26*f*p/100);$("#out").textContent="₹"+rev.toLocaleString("en-IN");$("#roi2").textContent="At ₹2,500/month, that is about "+(rev/2500).toFixed(1)+"x the subscription cost."}
+["r1","r2","r3"].forEach(function(i){$("#"+i).oninput=roi});roi();
+// ---- Contact ----
+$("#send").onclick=function(){var n=$("#n").value.trim(),b=$("#b").value.trim(),m=$("#m").value.trim();if(!n||!m){alert("Please add your name and a message.");return}location.href="mailto:ssaumyasingh91@gmail.com?subject="+encodeURIComponent("Boli enquiry from "+n)+"&body="+encodeURIComponent(m+"\n\nName: "+n+"\nBusiness: "+b)};
+$("#cp").onclick=function(){try{navigator.clipboard.writeText("ssaumyasingh91@gmail.com");$("#cp").textContent="Copied ✓"}catch(e){}};
+// ---- Reveal ----
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll(".rv").forEach(function(e){io.observe(e)});
+</script>
+</body>
+</html>
